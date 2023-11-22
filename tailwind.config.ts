@@ -17,12 +17,37 @@ module.exports = {
 			},
 		},
 		extend: {
+			boxShadow:{
+					bubbleShadow: 'inset 0px 0px 40px rgba(0,0,0,.2), 0 0 90px rgba(0,0,0,.8)',
+			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
 			keyframes: {
+				bubble: {
+					'0%, 100%': { borderRadius: '50% 50% 50% 50%' },
+					'5%': { borderRadius: '48% 50% 49% 40%' },
+					'10%': { borderRadius: '50% 40% 48% 49%' },
+					'15%': { borderRadius: '49% 50% 40% 48%' },
+					'20%': { borderRadius: '48% 49% 50% 40%' },
+					'25%': { borderRadius: '40% 48% 50% 49%' },
+					'30%': { borderRadius: '49% 40% 48% 50%' },
+					'35%': { borderRadius: '50% 49% 40% 48%' },
+					'40%': { borderRadius: '48% 50% 49% 40%' },
+					'45%': { borderRadius: '50% 40% 48% 49%' },
+					'50%': { borderRadius: '49% 50% 40% 48%' },
+					'55%': { borderRadius: '48% 49% 50% 40%' },
+					'60%': { borderRadius: '40% 48% 50% 49%' },
+					'65%': { borderRadius: '49% 40% 48% 50%' },
+					'70%': { borderRadius: '50% 49% 40% 48%' },
+					'75%': { borderRadius: '48% 50% 49% 40%' },
+					'80%': { borderRadius: '50% 40% 48% 49%' },
+					'85%': { borderRadius: '49% 50% 40% 48%' },
+					'90%': { borderRadius: '48% 49% 50% 40%' },
+					'95%': { borderRadius: '40% 48% 50% 49%' },
+				  },
 				'accordion-down': {
 					from: { height: 0 },
 					to: { height: 'var(--radix-accordion-content-height)' },
@@ -52,6 +77,7 @@ module.exports = {
 				},
 			},
 			animation: {
+				bubble: 'bubble 20s ease-in-out infinite',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'slide-down': 'slide-down 1.5s ease-in-out 1s forwards',

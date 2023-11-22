@@ -11,8 +11,8 @@ export default function LeftSidebar({
 
 
 return (
-  <aside className={cn('',className)}  >
-    <Image src='/images/brush.png' alt="" width={70} height={70} className=""/>
+  <aside className={cn('bg-black p-2 flex flex-col items-center',className)}  >
+    <Image src='/images/b-brush.png' alt="" width={60} height={60} className=""/>
      Left Side
   </aside>
   )

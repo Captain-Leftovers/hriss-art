@@ -19,9 +19,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} overflow-hidden grid `} style={{gridTemplateColumns:'70px auto 70px'}}>
+			<body className={`${inter.className} overflow-hidden grid `} style={{gridTemplateColumns:'80px auto 80px'}}>
 					<FullScreenLoader />
-					<LeftSidebar className='bg-red-300' />
+					<LeftSidebar className='' />
 				{children}
 					<RightSidebar className='bg-blue-300' />
 			</body>
