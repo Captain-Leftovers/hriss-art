@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import FullScreenLoader from '@/components/full-screen-loader'
+import FullScreenLoader from '@/components/FullScreenLoader'
+import LeftSidebar from '@/components/LeftSidebar'
+import RightSidebar from '@/components/RightSidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,10 +19,14 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} bg-white`}>
+			<body className={`${inter.className} overflow-hidden grid `} style={{gridTemplateColumns:'70px auto 70px'}}>
 					<FullScreenLoader />
+					<LeftSidebar className='bg-red-300' />
 				{children}
+					<RightSidebar className='bg-blue-300' />
 			</body>
 		</html>
 	)
 }
+
+// TODO maybe make the layout grid and fix the sidebars left and ight and they can grow and shrink
