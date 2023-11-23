@@ -18,8 +18,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
-			<body className={`${inter.className} overflow-hidden grid `} style={{gridTemplateColumns:'80px auto 80px'}}>
+		<html lang="en" className=''>
+			<body className={`${inter.className}  grid hide-scrollbar`} style={{gridTemplateColumns:'80px auto 80px'}}>
 					<FullScreenLoader />
 					<LeftSidebar className='' />
 				{children}

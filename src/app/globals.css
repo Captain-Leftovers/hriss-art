@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
- body{
-
-} 
-
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

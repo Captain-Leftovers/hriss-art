@@ -86,5 +86,15 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'),function ({ addUtilities }:  { addUtilities: (utilities: Record<string, any>) => void }) {
+		const newUtilities = {
+		  '.hide-scrollbar': {
+			scrollbarWidth: 'none', /* Firefox */
+			'&::-webkit-scrollbar': {
+			  display: 'none', /* Chrome, Safari, Edge */
+			},
+		  },
+		}
+		addUtilities(newUtilities)
+	  } ],
 }
